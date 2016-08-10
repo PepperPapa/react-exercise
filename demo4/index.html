@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Hello React!</title>
+    <script src="../react-15.3.0/build/react.js"></script>
+    <script src="../react-15.3.0/build/react-dom.js"></script>
+    <script src="../react-15.3.0/build/browser.min.js"></script>    
+  </head>
+  <body>
+    <div id="example"></div>
+    <script type="text/babel">
+      var HelloMessage = React.createClass({
+        render: function() {
+          return <h1>Hello, {this.props.name}</h1>;
+        }
+      });
+      
+      ReactDOM.render(
+        <HelloMessage name="John" />,
+        document.getElementById('example')
+      );
+    </script>
+  </body>
+</html>

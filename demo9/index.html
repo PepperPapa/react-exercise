@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Hello React!</title>
+    <script src="../react-15.3.0/build/react.js"></script>
+    <script src="../react-15.3.0/build/react-dom.js"></script>
+    <script src="../react-15.3.0/build/browser.min.js"></script>
+  </head>
+  <body>
+    <div id="example"></div>
+    <script type="text/babel">
+      var Input = React.createClass({
+        getInitialState: function() {
+          return {value: "Hello!"};
+        },
+
+        handleChange: function(event) {
+          this.setState({value: event.target.value});
+        },
+
+        render: function() {
+          var value = this.state.value;
+          return (
+            <div>
+              <input type="text" value={value} onChange={this.handleChange}/>
+              <p>{value}</p>
+            </div>
+          );
+        }
+      });
+
+      ReactDOM.render(<Input />, document.body);
+    </script>
+  </body>
+</html>

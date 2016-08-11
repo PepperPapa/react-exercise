@@ -1,0 +1,38 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Hello React!</title>
+    <script src="../react-15.3.0/build/react.js"></script>
+    <script src="../react-15.3.0/build/react-dom.js"></script>
+    <script src="../react-15.3.0/build/browser.min.js"></script>
+  </head>
+  <body>
+    <div id="example"></div>
+    <script type="text/babel">
+      var MyTitle = React.createClass({
+        // propTypes: {
+        //   title: React.PropTypes.string.isRequired,
+        // },
+
+        getDefaultProps: function() {
+          return {
+            title: "hello world"
+          };
+        },
+
+        render: function() {
+          return <h1> {this.props.title} </h1>;
+        }
+      });
+
+      var data = 123;
+      ReactDOM.render(
+        // <MyTitle title={data} />, // report error because of string is required
+        <MyTitle />,
+        document.body
+      );
+    </script>
+  </body>
+</html>

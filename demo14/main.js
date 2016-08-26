@@ -3,4 +3,8 @@ import ReactDOM from 'react-dom';
 
 import App from './App.jsx';
 
-ReactDOM.render(<App />, document.getElementById('app'));
+var array = [
+    "ROY",
+    "https://github.com/PepperPapa"
+];
+ReactDOM.render(<App name={array[0]} link={array[1]} />, document.getElementById('app'));
